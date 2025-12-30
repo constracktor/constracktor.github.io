@@ -12,7 +12,7 @@ sections:
     text: "Conference and Workshop Articles"
   - bibquery: "@conference"
     text: "Posters and Extended Abstracts"
-years: [2025, 2024, 2023]
+years: [2026, 2025, 2024, 2023]
 social: true
 nav: true
 nav_order: 3
