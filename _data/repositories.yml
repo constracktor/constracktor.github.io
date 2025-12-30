@@ -5,3 +5,8 @@ repo_description_lines_max: 2
 
 github_repos:
   - SC-SGS/GPRat
+  - constracktor/HPX-FFT
+  - lanl/HARD
+  - SC-SGS/PLSSVM
+  # SC-SGS/SYCLONE
+
