@@ -1,115 +1,117 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@InProceedings{Strack2023_cholesky,
+author="Strack, Alexander
+and Pfl{\"u}ger, Dirk",
+editor="Diehl, Patrick
+and Thoman, Peter
+and Kaiser, Hartmut
+and Kale, Laxmikant",
+title="Scalability of Gaussian Processes Using Asynchronous Tasks: A Comparison Between HPX and PETSc",
+booktitle="Asynchronous Many-Task Systems and Applications",
+year="2023",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="52--64",
+abstract="Gaussian processes are a widely used alternative to neural networks for non-linear system identification. The method requires computing the inversion of a large covariance matrix. In this work, we introduce our new task-based asynchronous implementation, focusing on its most popular solver, the Cholesky decomposition. Our implementation is based on HPX, utilizing its asynchronous many-task runtime system. We can therefore investigate its scaling on multi-core hardware and for GPU offloading. Furthermore, we compare our HPX implementation against a high-level reference implementation based on PETSc. We demonstrate that the HPX implementation's performance is directly tied to the chosen tile size. Compared to the PETSc reference, our task-based implementation is faster in the entire node-level strong scaling experiment on EPYC ROME, showing better parallel efficiency.",
+isbn="978-3-031-32316-4"
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@InProceedings{Strack2024_hpxfft,
+author="Strack, Alexander
+and Taylor, Christopher
+and Diehl, Patrick
+and Pfl{\"u}ger, Dirk",
+editor="Diehl, Patrick
+and Schuchart, Joseph
+and Valero-Lara, Pedro
+and Bosilca, George",
+title="Experiences Porting Shared and Distributed Applications to Asynchronous Tasks: A Multidimensional FFT Case-Study",
+booktitle="Asynchronous Many-Task Systems and Applications",
+year="2024",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="111--122",
+abstract="Parallel algorithms relying on synchronous parallelization libraries often experience adverse performance due to global synchronization barriers. Asynchronous many-task runtimes offer task futurization capabilities that minimize or remove the need for global synchronization barriers. This paper conducts a case study of the multidimensional Fast Fourier Transform to identify which applications will benefit from the asynchronous many-task model. Our basis is the popular FFTW library [7]. We use the asynchronous many-task model HPX and a one-dimensional FFTW backend to implement multiple versions using different HPX features and highlight overheads and pitfalls during migration. Furthermore, we add an HPX threading backend to FFTW. The case study analyzes shared memory scaling properties between our HPX-based parallelization and FFTW with its pthreads, OpenMP, and HPX backends. The case study also compares FFTW's MPI+X backend to a purely HPX-based distributed implementation. The FFT application does not profit from asynchronous task execution. In contrast, enforcing task synchronization results in better cache performance and thus better runtime. Nonetheless, the HPX backend for FFTW is competitive with existing backends. Our distributed HPX implementation based on HPX collectives using MPI parcelport has similar performance to FFTW's MPI+OpenMP. However, the LCI parcelport of HPX accelerated communication up to factor 5.",
+isbn="978-3-031-61763-8"
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@InProceedings{Strack2025_parcelports,
+author="Strack, Alexander
+and Pfl{\"u}ger, Dirk",
+editor="Caino-Lores, Silvina
+and Zeinalipour, Demetris
+and Doudali, Thaleia Dimitra
+and Singh, David E.
+and Garz{\'o}n, Gracia Ester Mart{\'i}n
+and Sousa, Leonel
+and Andrade, Diego
+and Cucinotta, Tommaso
+and D'Ambrosio, Donato
+and Diehl, Patrick
+and Dolz, Manuel F.
+and Jukan, Admela
+and Montella, Raffaele
+and Nardelli, Matteo
+and Garcia-Gasulla, Marta
+and Neuwirth, Sarah",
+title="A HPX Communication Benchmark: Distributed FFT Using Collectives",
+booktitle="Euro-Par 2024: Parallel Processing Workshops",
+year="2025",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="271--274",
+abstract="Due to increasing core counts in modern processors, several task-based runtimes emerged, including the C++ Standard Library for Concurrency and Parallelism (HPX). Although the asynchronous many-task runtime HPX allows implicit communication via an Active Global Address Space, it also supports explicit collective operations. Collectives are an efficient way to realize complex communication patterns.",
+isbn="978-3-031-90203-1"
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
+@article{Loiseau2025_hard,
+title = {HARD: A performance portable radiation hydrodynamics code based on FleCSI framework},
+journal = {SoftwareX},
+volume = {32},
+pages = {102441},
+year = {2025},
+issn = {2352-7110},
+doi = {https://doi.org/10.1016/j.softx.2025.102441},
+url = {https://www.sciencedirect.com/science/article/pii/S2352711025004078},
+author = {Julien Loiseau and Hyun Lim and Andrés {Yagüe López} and Mammadbaghir Baghirzade and Shihab Shahriar Khan and Yoonsoo Kim and Sudarshan Neopane and Alexander Strack and Farhana Taiyebah and Ben Bergen},
+keywords = {Task based parallelism, Hydrodynamics, Radiative diffusion},
+abstract = {Hydrodynamics And Radiation Diffusion (HARD) is an open-source application for high-performance simulations of compressible hydrodynamics with radiation-diffusion coupling. Built on the FleCSI (Bergen et al., 2021 [1]) (Flexible Computational Science Infrastructure) framework, HARD expresses its computational units as tasks whose execution can be orchestrated by multiple back-end runtimes, including Legion (Bauer et al., 2012 [2]), MPI (Forum, 1994 [3]), and HPX (Kaiser et al., 2020 [4]). Node-level parallelism is handled through Kokkos (Edwards et al., 2014 [5]), providing a single-source, portable code base that runs efficiently on laptops, small homogeneous clusters, and the largest heterogeneous supercomputers currently available. To ensure scientific reliability, HARD includes a regression test suite that automatically reproduces canonical verification problems such as the Sod and LeBlanc shock tubes, and the Sedov blast wave, comparing numerical solutions against known analytical results. The project is distributed under an OSI-approved license, hosted on GitHub, and accompanied by reproducible build scripts and continuous integration workflows. This combination of performance portability, verification infrastructure, and community-focused development makes HARD a sustainable platform for advancing radiation hydrodynamics research across multiple domains.}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@InProceedings{Strack2026_fft_riscv,
+author="Strack, Alexander
+and Taylor, Christopher
+and Pfl{\"u}ger, Dirk",
+editor="Neuwirth, Sarah
+and Paul, Arnab Kumar
+and Weinzierl, Tobias
+and Carson, Erin Claire",
+title="Parallel FFTW on RISC-V: A Comparative Study Including OpenMP, MPI, and HPX",
+booktitle="High Performance Computing",
+year="2026",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="586--597",
+abstract="Rapid advancements in RISC-V hardware development shift the focus from low-level optimizations to higher-level parallelization. Recent RISC-V processors, such as the SOPHON SG2042, have 64 cores. RISC-V processors with core counts comparable to the SG2042, make efficient parallelization as crucial for RISC-V as the more established processors such as x86-64.",
+isbn="978-3-032-07612-0"
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@InProceedings{Helmann2026_gprat,
+author="Helmann, Maksim
+and Strack, Alexander
+and Pfl{\"u}ger, Dirk",
+editor="Diehl, Patrick
+and Cao, Qinglei
+and Herault, Thomas
+and Bosilca, George",
+title="GPRat: Gaussian Process Regression with Asynchronous Tasks",
+booktitle="Asynchronous Many-Task Systems and Applications",
+year="2026",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="83--94",
+abstract="Python is the de-facto language for software development in artificial intelligence (AI). Commonly used libraries, such as PyTorch and TensorFlow, rely on parallelization built into their BLAS backends to achieve speedup on CPUs. However, only applying parallelization in a low-level backend can lead to performance and scaling degradation. In this work, we present a novel way of binding task-based C++ code built on the asynchronous runtime model HPX to a high-level Python API using pybind11. We develop a parallel Gaussian process (GP) library as an application. The resulting Python library GPRat combines the ease of use of commonly available GP libraries with the performance and scalability of asynchronous runtime systems. We evaluate the performance on a mass-spring-damper system, a standard benchmark from control theory, for varying numbers of regressors (features). The results show almost no binding overhead when binding the asynchronous HPX code using pybind11. Compared to GPyTorch and GPflow, GPRat shows superior scaling on up to 64 cores on an AMD EPYC 7742 CPU for training. Furthermore, our library achieves a prediction speedup of 7.63 over GPyTorch and 25.25 over GPflow. If we increase the number of features from eight to 128, we observe speedups of 29.62 and 21.19, respectively. These results showcase the potential of using asynchronous tasks within Python-based AI applications.",
+isbn="978-3-031-97196-9"
 }

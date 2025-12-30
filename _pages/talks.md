@@ -1,30 +1,20 @@
 ---
 layout: page
-permalink: /publications/
-title: Publications
-description: Publications by categories in reversed chronological order.
-sections:
-  - bibquery: "@article"
-    text: "Journal Articles"
-  #- bibquery: "@phdthesis"
-  #  text: "Dissertation"
-  - bibquery: "@inproceedings"
-    text: "Conference and Workshop Articles"
-  - bibquery: "@conference"
-    text: "Posters and Extended Abstracts"
-years: [2025, 2024, 2023]
-social: true
+permalink: /talks/
+title: Talks
+description: Given talks in reversed chronological order.
 nav: true
-nav_order: 3
+nav_order: 4
+years: [2025, 2024, 2023, 2022]
+sections:
+  - bibquery: "@misc"
+    text: "Talks"
 ---
 
 <div class="publications">
 
 {%- for section in page.sections %}
-<a id="{{section.text}}"></a>
-
-  <p class="bibtitle">{{section.text}}</p>
-  {%- for y in page.years %}
+{%- for y in page.years %}
 
     {%- comment -%}  Count bibliography in actual section and year {%- endcomment -%}
     {%- capture citecount -%}
