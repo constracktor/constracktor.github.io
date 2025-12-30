@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://constracktor.github.io/sitemap.xml
+Sitemap: https://www.alexanderstrack.com/sitemap.xml
