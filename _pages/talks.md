@@ -2,10 +2,10 @@
 layout: page
 permalink: /talks/
 title: Talks
-description: Given talks in reversed chronological order.
+description: Given talks in reversed chronological order. Coming soon ...
 nav: true
 nav_order: 4
-years: [2025, 2024, 2023, 2022]
+years: [2026, 2025, 2024, 2023, 2022]
 sections:
   - bibquery: "@misc"
     text: "Talks"

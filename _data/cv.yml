@@ -1,12 +1,23 @@
 - title: General Information
   type: map
   contents:
-    - name: Full Name
+    - name: Name
       value: Alexander Strack
       #- name: Date of Birth
       #value: 14th March 1879
     - name: Languages
       value: English, German
+    - name: Background
+      value: Computational Engineering
+    - name: Position
+      value: Researcher at University of Stuttgart
+    - name: Email
+      value: alexander.strack@ipvs.uni-stuttgart.de
+    - name: Phone
+      value: +49 711 68588308
+    - name: Address
+      value: Universitätsstraße 38, 70569 Stuttgart, Germany
+
 #
 # - title: Education
 #   type: time_table
