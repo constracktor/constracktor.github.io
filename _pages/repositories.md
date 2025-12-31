@@ -33,6 +33,7 @@ nav_order: 5
 <!---->
 <!-- {% endfor %} -->
 <!-- {% endif %} -->
+
 {% endif %}
 
 ## GitHub Repositories
@@ -44,4 +45,5 @@ nav_order: 5
     {% include repository/repo.liquid repository=repo %}
   {% endfor %}
 </div>
+
 {% endif %}
