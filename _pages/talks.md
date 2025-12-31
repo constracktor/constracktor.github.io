@@ -2,7 +2,7 @@
 layout: page
 permalink: /talks/
 title: Talks
-description: Given talks in reversed chronological order. Coming soon ...
+description: Given talks in reversed chronological order. Slides available upon request.
 nav: true
 nav_order: 4
 years: [2026, 2025, 2024, 2023, 2022]
