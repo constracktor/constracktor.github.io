@@ -31,4 +31,4 @@ Alexander’s research interests include task-based runtime systems, performance
 He is particularly interested in the design and evaluation of AMT systems for large-scale scientific simulations and AI workloads, with a focus on scalability, efficiency, and programmability.
 His work explores how asynchronous parallelization techniques can improve resource utilization, enhance performance on emerging computing platforms, and support the next generation of HPC applications.
 
-**My full Curriculum Vitae is available as a pdf here: _[Alexander Strack CV](https://www.alexanderstrack.com/assets/pdf/alexander_strack.pdf)_**
+**My full Curriculum Vitae is available as a pdf here: _[Alexander Strack CV](https://www.alexanderstrack.com/assets/pdf/alexanderstrack.pdf)_**
